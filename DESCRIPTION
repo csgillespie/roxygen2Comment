@@ -1,0 +1,18 @@
+Package: roxygen2Comment
+Type: Package
+Title: Rstudio roxygen2 addin
+Version: 0.1.0
+Date: 2016-04-16
+Authors@R: person(given="Colin", family="Gillespie",
+    email="csgillespie@gmail.com", role = c("aut", "cre"))
+Maintainer: Colin Gillespie <csgillespie@gmail.com>
+Description: An RStudio addin for adding and remove roxygen2 comments.
+License: GPL-2 | GPL-3
+LazyData: TRUE
+URL: https://github.com/csgillespie/roxygen2Comment
+BugReports: https://github.com/csgillespie/roxygen2Comment/issues
+Imports:
+    rstudioapi(>= 0.5)
+Suggests: knitr
+RoxygenNote: 5.0.1
+VignetteBuilder: knitr

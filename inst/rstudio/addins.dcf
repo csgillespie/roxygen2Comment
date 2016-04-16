@@ -1,0 +1,4 @@
+Name: roxygen2 comment block
+Description: Add an roxygen2 comment block
+Binding: roxygen2_block
+Interactive: false
