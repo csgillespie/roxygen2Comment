@@ -20,9 +20,7 @@ knitr::opts_chunk$set(
 [![CRAN](http://www.r-pkg.org/badges/version/roxygen2Comment)](http://cran.rstudio.com/package=roxygen2Comment)
 
 RStudio addins let you execute a bit of R code or a Shiny app through the RStudio IDE,
-either via the Addins dropdown menu or with a keyboard shortcut. 
-
-This package contains an RStudio addin for commenting roxygen2 code.
+either via the Addins dropdown menu or with a keyboard shortcut. This package contains an RStudio addin for commenting roxygen2 code.
 
 This package can be installed via
 ```{r eval=FALSE}
@@ -32,7 +30,11 @@ devtools::install_github("csgillespie/roxygen2Comment")
 ## Running addins
 
 After installing the package, the _Addins_ menu toolbar will be populated with the 
-new, exported addin.
+new, exported addin. The addin will work exactly like the RStudio keyboard
+shortcut for commenting. 
+
+  * If you execute the addin on standard code, it will add `#'` to the start of the line.
+  * If you execute the addin on an roxygen2 comment, it will remove `#'`
 
 ## Manage your addins
 
