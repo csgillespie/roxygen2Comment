@@ -1,6 +1,7 @@
 #' Adds an roxygen2 comment block
 #'
 #' Adds an roxygen2 comment block
+#' @import rstudioapi
 #' @export
 roxygen2_block = function() {
   location = rstudioapi::getActiveDocumentContext()
