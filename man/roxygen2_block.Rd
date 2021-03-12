@@ -9,4 +9,3 @@ roxygen2_block()
 \description{
 Adds an roxygen2 comment block
 }
-
