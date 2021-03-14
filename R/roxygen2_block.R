@@ -15,9 +15,19 @@ roxygen2_block = function() {
 
   # If roxygen2 block remove #'
   # If not remove, add #'
-  is_roxy2 = substr(line, 1L, 2L) == "#'"
+  comment = grep(
+    "^#'\\s?" # line starts with "#'", has no or one trailing whitespace
+    , line
+    , value = TRUE
+  )
+
+  is_roxy2 = length(comment > 0)
   if(is_roxy2) {
-    rng = Map(c, Map(c, r, 1), Map(c, r, 3))
+    rng = Map(
+      c
+      , Map(c, r, 1)
+      , Map(c, r, ifelse(grepl("\\s", comment), 4, 3)) # if applicable, strip trailing whitespace
+    )
     modifyRange(rng, "")
   } else {
     pos = Map(c, r_start:r_end, 1)
